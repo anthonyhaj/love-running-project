@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald:wght@300&display=swap');
 
 * {
     margin: 0;
@@ -34,7 +34,9 @@ h2 {
     letter-spacing: 4px;
 
 }
-#menu, #logo {
+
+#menu,
+#logo {
     line-height: 75px;
 
 }
@@ -63,28 +65,29 @@ h2 {
 /* hero image */
 
 #hero-image {
-    height: 98vh;
+    height: 600px;
     width: 100%;
     background: url('../images/hero-image.webp') no-repeat center center;
+
+    /* animation for zoom effect on loading page */
+    animation-name: hero-zoom;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
 }
 
 #hero-outer {
     height: 600px;
     width: 100%;
     overflow: hidden;
-
-/* animation for zoom effect on loading page */
-animation-name: hero-zoom;
-animation-duration: 5s;
-animation-fill-mode: forwards;
-
 }
-    /* level of zoom for hero image animation */
+
+/* level of zoom for hero image animation */
 @keyframes hero-zoom {
-    from{ 
+    from {
         transform: scale(1);
     }
-    to{
+
+    to {
         transform: scale(1.1);
     }
 }
